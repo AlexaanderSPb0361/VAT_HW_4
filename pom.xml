@@ -91,7 +91,7 @@
                     <schemas>
                         <schema>schemaName</schema>
                     </schemas>  -->
-                    <url>jdbc:sqlite:home.db</url>
+                    <url>jdbc:sqlite:home.db</url> //тут должно быть не home.db, а homework.db
                     <locations>filesystem:db/home/migration</locations>
                 </configuration>
             </plugin>
