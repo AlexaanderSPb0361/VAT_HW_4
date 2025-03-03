@@ -67,13 +67,13 @@ public class CustomerTest extends AbstractTest {
         //given
         CustomersEntity entity = new CustomersEntity();
         entity.setCustomerId((short) 16);
-        entity.setApartment("100");
-        entity.setDistrict("Южный");
-        entity.setFirstName("Федор");
-        entity.setLastName("Федорович");
-        entity.setHouse("5");
-        entity.setPhoneNumber("+7 960 800 9000");
-        entity.setStreet("Центральная");
+        entity.setApartment("50");
+        entity.setDistrict("Западный");
+        entity.setFirstName("Захар");
+        entity.setLastName("Захарович");
+        entity.setHouse("10");
+        entity.setPhoneNumber("+7 123 456 789");
+        entity.setStreet("Ленская");
         //when
         Session session = getSession();
         session.beginTransaction();
@@ -85,7 +85,7 @@ public class CustomerTest extends AbstractTest {
         CustomersEntity creditEntity = (CustomersEntity) query.uniqueResult();
         //then
         Assertions.assertNotNull(creditEntity);
-        Assertions.assertEquals("100", creditEntity.getApartment());
+        Assertions.assertEquals("50", creditEntity.getApartment());
     }
 
     @Test
